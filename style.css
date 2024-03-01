@@ -1,0 +1,186 @@
+/* ==============
+Table of contents
+=============== 
+1.Global style
+2.Header
+3.Middle
+4.Wave
+*/
+
+
+/* ==============
+1.Global style
+===============*/
+
+*{margin: 0;color: wheat;}
+html {box-sizing: border-box;} 
+ 
+*, *:before, *:after {box-sizing: inherit;}  
+
+.cover{
+    background-image: url(https://taleek.com/img/bg-layer.svg);
+    height: 929px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    background-color: brown;
+    position: relative;
+}
+
+
+/* ==============
+2.Header
+===============*/
+header{
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.logo{
+    margin-top: 20px;
+
+}
+
+p{
+    display: inline-block;
+    position: relative;
+    top: -18px;
+    color: white;
+    letter-spacing: 2px;
+}
+a{
+    text-decoration: none;
+    font-size: 20px;
+    margin: 15px;
+    opacity: .5;
+    transition: all .3s;
+}
+a:hover{
+    opacity: 1;
+}
+nav{
+    margin-top: 30px;
+}
+
+
+
+
+
+/* ==============
+3.Middle
+===============*/
+
+.middle{
+    height: 400px;
+    position: relative;
+}
+
+h1{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 45px;
+    animation: taleek infinite 10s linear;
+}
+@keyframes taleek {
+    0%,100%{
+        letter-spacing: 7px;
+    }
+    50%{letter-spacing: 17px;}
+}
+.main-img{
+    width: 700px;
+    display: block;
+    margin: 0 auto;
+    animation: mainimg infinite 10s linear;
+
+}
+@keyframes mainimg {
+    0%,100%{transform: translate(0,0);}
+    50%{transform: translate(100px,0);}
+}
+.left{
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    
+}
+button{
+    all: unset;
+    background-color: goldenrod;
+    border-radius: 15px;
+    padding: 10px 15px;
+    margin: 10px 0;
+    cursor: pointer;
+    font-size: 25px;
+    transition: all .3s;
+    display: block;
+
+}
+
+button:hover{
+font-size: 15px;
+padding:5px 10px;
+
+}
+@media(max-width: 900px)
+{
+.left{
+ text-align: center;
+  position: static;
+}
+button{
+    margin: 0 auto;
+}
+}
+
+
+
+
+
+
+/* ==============
+4.Wave 
+===============*/
+
+.wave{
+    
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    height: 143px;
+    bottom: 0;
+    background-image: url(wave.png);
+    animation: waveani infinite 200s;
+}
+@keyframes waveani {
+    0%,100%{
+        background-position: 10000px;
+    }
+    50%{
+        background-position: 100px;
+
+    }
+}
+.wave::before{
+    content: "";
+    background-image: url(wave.png);
+    opacity: 0.5;
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    height: 143px;
+    bottom: 0;
+    background-image: url(wave.png);
+    animation: waverev infinite 200s;
+}
+@keyframes waverev {
+    0%,100%{
+        background-position: -10000px;
+    }
+    50%{
+        background-position: -100px;
+
+    }
+}
